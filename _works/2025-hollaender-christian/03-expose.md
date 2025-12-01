@@ -1,6 +1,6 @@
 # Exposé für eine Masterarbeit
 
-## Multi-Channel Web-Integration für föderiertes Adressmanagement: Design und Implementierung einer Self-Sovereign Address Platform
+## Multi-Channel Web-Integration für föderiertes Adressmanagement: Design und Implementierung einer Self-Sovereign Address Lösung
 
 ---
 
