@@ -54,21 +54,7 @@ Wie können Browser-Extensions als Semi-Automatic-Layer für föderiertes Adress
 
 ---
 
-### Frage 3: API-First Architecture & RESTful Design
-
-**Hauptfrage:**
-Welche RESTful API-Patterns und Authentifizierungsmechanismen ermöglichen eine sichere, DSGVO-konforme und entwicklerfreundliche Integration von föderiertem Adressmanagement in bestehende Web-Systeme?
-
-**Teilfragen:**
-- Welche REST-API-Design-Prinzipien eignen sich für föderierte Identity-Systeme?
-- Wie können OAuth 2.0 und OpenID Connect für delegierte Autorisierung genutzt werden?
-- Welche Webhook-Architekturen ermöglichen Event-Driven Address Updates?
-- Wie muss eine API-Gateway-Architektur gestaltet sein, um verschiedene externe Dienste einheitlich anzusprechen?
-- Welche Developer Experience Faktoren beeinflussen die Adoption von Identity-APIs?
-
----
-
-### Frage 4: Adoption & Transition in heterogenen Ökosystemen
+### Frage 3 (vorher Frage 4): Adoption & Transition in heterogenen Ökosystemen
 
 **Hauptfrage:**
 Wie kann ein föderiertes Adressmanagement-System inkrementell in ein Ökosystem eingeführt werden, in dem externe Dienste (Banken, Versicherungen, Behörden) unterschiedliche Digitalisierungsgrade aufweisen?
@@ -79,31 +65,3 @@ Wie kann ein föderiertes Adressmanagement-System inkrementell in ein Ökosystem
 - Welches Value Proposition motiviert Early Adopters zur Nutzung, wenn nur 20% ihrer Dienste initial automatisiert werden können?
 - Wie können Netzwerkeffekte genutzt werden, um externe Dienste zur API-Integration zu motivieren?
 - Welche Metriken zeigen Nutzern den inkrementellen Mehrwert (Zeitersparnis, reduzierte Fehler)?
-
----
-
-### Frage 5: Interoperabilität in fragmentierten Service-Landschaften
-
-**Hauptfrage:**
-Welche technischen Standards und Adapter-Patterns ermöglichen einem föderierten Adressmanagement-System die Interoperabilität mit heterogenen externen Diensten (von Legacy-Systemen bis zu modernen APIs)?
-
-**Teilfragen:**
-- Welche bestehenden Standards (OAuth, SCIM, OpenID Connect) können für standardisierte Address-Update-Protokolle adaptiert werden?
-- Wie können Adapter-Patterns (REST, SOAP, Screen Scraping) verschiedene Integrationslevel abstrahieren?
-- Welche Rolle könnten neue Standards (z.B. W3C Verifiable Credentials) für maschinenlesbare Adressnachweise spielen?
-- Wie kann ein Gateway-System entworfen werden, das sowohl Push-Updates (Webhooks) als auch Pull-Mechanismen (Polling) unterstützt?
-- Welche Semantic Web-Technologien (JSON-LD, Schema.org) könnten Adress-Datenstrukturen zwischen Systemen vereinheitlichen?
-
----
-
-### Frage 6: User-Centered Design meets Web Security
-
-**Hauptfrage:**
-Wie müssen webbasierte User Interfaces für föderiertes Adressmanagement gestaltet sein, um das Spannungsfeld zwischen Sicherheit, Privacy und Usability zu lösen?
-
-**Teilfragen:**
-- Welche Interaction Design Patterns erhöhen die Verständlichkeit von Consent Management?
-- Wie kann komplexes Privacy-Feedback (Wer hat welche Daten wann abgerufen?) nutzerfreundlich visualisiert werden?
-- Welche Frontend-Architekturen unterstützen progressive Disclosure bei komplexen Konfigurationsoptionen?
-- Wie beeinflusst die Darstellung von Sicherheitsindikatoren das Nutzervertrauen?
-- Welche Accessibility-Anforderungen müssen bei Security-kritischen Interfaces beachtet werden?
