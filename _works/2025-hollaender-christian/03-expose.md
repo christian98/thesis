@@ -6,85 +6,88 @@
 
 ## Problemstellung
 
-Jeder von uns gibt seine Postadresse dutzende Male weiter -- an Online-Shops, Lieferdienste, Behörden, Banken und Versicherungen. Bei einem Umzug wird das zum Problem: Jeder einzelne Dienst muss manuell über die neue Adresse informiert werden. Dabei vergisst man unweigerlich wichtige Stellen, was zu Problemen bei der Zustellung führt oder dazu, dass wichtige Dokumente an der alten Adresse landen. Gleichzeitig hat man als Nutzer kaum Überblick darüber, wer eigentlich die eigene Adresse gespeichert hat.
+Jeder von uns gibt seine Postadresse dutzende Male weiter – an Online-Shops, Lieferdienste, Behörden, Banken und Versicherungen. Bei einem Umzug wird das zum Problem: Jeder einzelne Dienst muss manuell über die neue Adresse informiert werden. Dabei vergisst man unweigerlich wichtige Stellen, was zu Zustellproblemen führt oder dazu, dass wichtige Dokumente an der alten Adresse landen. Gleichzeitig hat man als Nutzer kaum Überblick darüber, wer eigentlich die eigene Adresse gespeichert hat.
 
-Technisch betrachtet zeigt sich hier ein größeres Problem: Persönliche Daten liegen verstreut in hunderten verschiedenen Systemen, über die Nutzer praktisch keine Kontrolle haben. Das widerspricht den Prinzipien von Data Privacy und Self-Sovereign Identity, die auch in der DSGVO verankert sind. Eine föderierte Lösung könnte hier Abhilfe schaffen -- Nutzer verwalten ihre Daten zentral und geben einzelnen Diensten gezielt Zugriff.
+Technisch betrachtet zeigt sich hier ein größeres Problem: Persönliche Daten liegen verstreut in hunderten verschiedenen Systemen, über die Nutzer praktisch keine Kontrolle haben. Das widerspricht den Prinzipien von Data Privacy und Self-Sovereign Identity, die auch in der DSGVO verankert sind. Eine föderierte Lösung könnte hier Abhilfe schaffen – Nutzer verwalten ihre Daten zentral und geben einzelnen Diensten gezielt Zugriff.
 
-Die zentrale technische Herausforderung liegt dabei woanders als zunächst vermutet: Die überwältigende Mehrheit der relevanten Services bietet keine APIs für Adressänderungen an. Nach meiner Einschätzung betrifft das über 95% der Dienste. Stattdessen müssen Nutzer Webformulare manuell ausfüllen, sich in Kundenportale einloggen oder Papierformulare verschicken. Ob Amazon, Sparkasse, Versicherungen oder Behörden -- bei fast allen läuft die Adressänderung über klassische Web-Interfaces ohne maschinelle Schnittstellen.
+Die zentrale technische Herausforderung liegt dabei woanders als zunächst vermutet: Die überwältigende Mehrheit der relevanten Services bietet keine APIs für Adressänderungen an. Nach meiner Einschätzung betrifft das über 95% der Dienste. Stattdessen müssen Nutzer Webformulare manuell ausfüllen, sich in Kundenportale einloggen oder sogar Papierformulare verschicken. Ob Online-Händler, Banken, Versicherungen oder Behörden – bei fast allen läuft die Adressänderung über klassische Web-Interfaces ohne maschinelle Schnittstellen.
 
-Das bedeutet: Ein System zur Automatisierung von Adressänderungen kann sich nicht auf REST-APIs oder Webhooks verlassen. Es muss mit der Realität umgehen, dass die meisten Dienste nur über Web-basierte Formulare erreichbar sind. Die Frage ist also, wie man trotzdem eine praktikable Lösung baut.
+Das bedeutet: Ein System zur Unterstützung von Adressänderungen kann sich nicht auf REST-APIs oder Webhooks verlassen. Es muss mit der Realität umgehen, dass die meisten Dienste nur über webbasierte Formulare erreichbar sind. Ein rein API-zentrierter Ansatz würde von Anfang an ins Leere laufen, weil er auf Partner-Kooperation angewiesen wäre, die in der Praxis schlicht nicht gegeben ist.
 
-Gleichzeitig stellt sich die Frage nach der Datenhaltung: Braucht es eine zentrale Datenbank, oder gibt es Architekturen, die das Risiko von Daten-Leaks von vornherein minimieren? Wie baut man ein System, das gleichzeitig sicher, benutzerfreundlich, DSGVO-konform und realistisch integrierbar ist?
-
-Das Sovrin Network zeigt, wohin rein technologiegetriebene Ansätze führen können. Sovrin setzte auf Blockchain für Self-Sovereign Identity, scheiterte aber an mangelnder Adoption und fehlender praktischer Integrierbarkeit. Das MainNet wurde im März 2025 eingestellt. Daraus folgt: Man braucht einen pragmatischeren Ansatz, der verschiedene Integrationslevel unterstützt und mit den realen Einschränkungen existierender Web-Systeme umgehen kann.
+Die Lösung liegt in einem mehrstufigen Ansatz: Ein System, das auf der untersten Ebene komplett ohne externe Kooperation funktioniert, auf der mittleren Ebene Browser-basierte Automatisierung nutzt, und auf der obersten Ebene vollständige API-Integration für kooperative Partner ermöglicht. So entsteht ein System, das vom ersten Tag an Mehrwert bietet – und mit jedem neuen Partner besser wird, ohne von ihnen abhängig zu sein.
 
 ## Forschungsfrage
 
 Die zentrale Forschungsfrage dieser Arbeit lautet:
 
-*Wie lässt sich eine föderierte Adressmanagement-Plattform gestalten, die heterogene Web-basierte Integrationsmechanismen unterstützt und Nutzern Self-Sovereign Control über ihre Daten ermöglicht, während sie praktisch mit bestehenden Systemen ohne APIs funktioniert?*
+*Wie lässt sich eine Multi-Channel-Integrationsarchitektur für föderiertes Adressmanagement gestalten, die unabhängig vom Digitalisierungsgrad externer Dienste funktioniert?*
 
-Konkret sollen folgende Teilfragen beantwortet werden:
+Diese Frage adressiert den Kern des Problems: Eine Architektur zu entwickeln, die *immer* funktioniert – egal ob der externe Dienst eine moderne API anbietet, nur ein Webformular hat, oder ausschließlich per E-Mail erreichbar ist.
 
-- Welche Web-basierten Integrationsmechanismen sind praktisch umsetzbar, wenn keine APIs verfügbar sind? In Betracht kommen Browser-Extensions für automatisches Formular-Ausfüllen, Headless Browser-Automation, E-Mail-Automation sowie Deep-Links zu Kundenportalen.
-- Wie designt man eine Multi-Level-Integration-Architektur, die graceful degradation unterstützt -- von vollautomatischen API-Calls bis zu manuellen Anleitungen?
-- Wie kann eine Browser-Extension sicher mit einem Backend kommunizieren, ohne Nutzerdaten zu kompromittieren?
-- Wie lassen sich Headless Browser-Automations (ähnlich Cypress oder Playwright) für Audit-Zwecke aufzeichnen, ohne gegen Datenschutz-Richtlinien zu verstoßen?
-- Welche Datenhaltungsstrategien existieren, und wie unterscheiden sie sich hinsichtlich Sicherheit und Daten-Leak-Risiko?
-- Wie gestaltet man eine DSGVO-konforme Lösung, die Privacy-by-Design umsetzt?
+Zur Beantwortung dieser Frage werden folgende Teilfragen untersucht:
+
+**Teilfrage 1 – Multi-Channel Web-Integration:**
+Welche webbasierten Integrationsmuster und Frontend-Architekturen eignen sich, um Adressaktualisierungen über verschiedene Kanäle (manuell, semi-automatisch, vollautomatisch) zu ermöglichen?
+
+**Teilfrage 2 – Browser-Extensions als Brückentechnologie:**
+Wie können Browser-Extensions als semi-automatische Integrationsschicht dienen, um die Lücke zwischen rein manuellen Prozessen und API-basierten Lösungen zu schließen?
+
+**Teilfrage 3 – Inkrementelle Adoption:**
+Wie muss ein solches System gestaltet sein, damit Nutzer sofort profitieren – auch wenn zunächst nur ein Bruchteil ihrer Dienste automatisiert integriert ist?
 
 ## Vorgehen
 
-Methodisch orientiere ich mich an einem Design-Science-Ansatz mit starkem Praxisbezug. Die Arbeit gliedert sich in mehrere Phasen:
+Methodisch folge ich einem Design-Science-Research-Ansatz, bei dem die Entwicklung eines funktionsfähigen Artefakts im Mittelpunkt steht. Die Arbeit gliedert sich in fünf Phasen:
 
-### Phase 1: Analyse und Problemraum-Exploration
+### Phase 1: Problemverständnis und Anforderungsanalyse
 
-Zunächst recherchiere ich den aktuellen Stand im Bereich Self-Sovereign Identity und föderiertes Datenmanagement. Dabei betrachte ich bestehende Standards wie OAuth 2.0, OpenID Connect und W3C DID. Besonders aufschlussreich sind auch gescheiterte Ansätze wie Sovrin, um zu verstehen, welche Faktoren zum Scheitern führten.
+In dieser Phase schärfe ich das Problemverständnis und definiere die Anforderungen an das zu entwickelnde System. Als Ausgangspunkt nutze ich die Requirements-Analyse, die ich bereits in einem vorherigen Kurs erarbeitet habe. Diese umfasst eine Stakeholder-Analyse, Personas, funktionale Anforderungen sowie Use Cases.
 
-Ein wesentlicher Schwerpunkt liegt auf der empirischen Analyse: Welche Integrationsmöglichkeiten bieten relevante Services tatsächlich an? Ich analysiere eine repräsentative Auswahl von Services aus verschiedenen Bereichen -- E-Commerce, Banken, Versicherungen, Behörden -- und dokumentiere systematisch, ob APIs existieren, welche Web-Interfaces verfügbar sind, und welche Automation-Ansätze technisch realisierbar sind.
+Ergänzend analysiere ich eine repräsentative Auswahl realer Services aus verschiedenen Bereichen – E-Commerce, Banken, Versicherungen, Behörden – und dokumentiere systematisch, welche Integrationsmöglichkeiten sie tatsächlich anbieten. Diese empirische Bestandsaufnahme bildet die Grundlage für die Architekturentscheidungen in Phase 2.
 
-Als Ausgangspunkt nutze ich die Requirements-Analyse, die ich bereits in einem vorherigen Kurs erarbeitet habe und die Stakeholder-Analyse, Personas, funktionale Anforderungen sowie Use Cases umfasst.
+Parallel dazu sichte ich den aktuellen Stand im Bereich Self-Sovereign Identity und föderiertes Datenmanagement. Der Fokus liegt dabei auf Standards und Konzepten, die für meine Architektur relevant sind – etwa OAuth 2.0, OpenID Connect und W3C Decentralized Identifiers.
 
-### Phase 2: Multi-Level Integration Architecture Design
+### Phase 2: Architekturentwurf
 
-Aufbauend auf den Erkenntnissen aus Phase 1 entwerfe ich eine flexible Architektur, die verschiedene Integrationslevel unterstützt:
+Aufbauend auf den Erkenntnissen aus Phase 1 entwerfe ich eine Multi-Channel-Integrationsarchitektur mit drei Ebenen:
 
-**Level 0 -- Manual (Guided):** Das System generiert strukturierte Checklisten, Deep-Links zu Kundenportalen und vorausgefüllte E-Mail-Vorlagen. Dieser Ansatz funktioniert unabhängig von Partner-Kooperationen.
+**Ebene 1 – Manuelle Unterstützung:** Das System generiert strukturierte Checklisten, Deep-Links zu Kundenportalen, vorausgefüllte E-Mail-Vorlagen und exportierbare PDF-Dokumente. Diese Ebene funktioniert komplett ohne Partner-Kooperation und bietet sofortigen Nutzen.
 
-**Level 1 -- Semi-Automated:** Auf dieser Stufe werden automatisch vorausgefüllte PDF-Formulare generiert und E-Mails im Namen des Nutzers verschickt, inklusive Tracking-Funktionalität.
+**Ebene 2 – Semi-automatisch:** Eine Browser-Extension erkennt Adressfelder auf Webseiten und ermöglicht automatisches Ausfüllen. Diese Ebene schließt die Lücke zwischen manueller Arbeit und vollständiger Automatisierung, ohne dass der externe Dienst aktiv kooperieren muss.
 
-**Level 2 -- Browser-Assisted:** Eine Browser-Extension erkennt Adressfelder auf Webseiten und ermöglicht Auto-Fill. Ergänzend kommt Headless Browser-Automation (Playwright oder Cypress) für komplexe Login-Flows zum Einsatz. Die Automations werden per Video aufgezeichnet, sowohl für Audit-Zwecke als auch zur Fehleranalyse.
+**Ebene 3 – Vollautomatisch:** Für Services, die APIs bereitstellen oder aktiv kooperieren möchten, wird eine Webhook-basierte Integration ermöglicht. Diese Ebene ist optional und erweitert das System, sobald Partner hinzukommen.
 
-**Level 3 -- Full API Integration:** Für kooperative Services erfolgt die Integration über RESTful API Calls und Webhook-basierte Benachrichtigungen mit OAuth 2.0 Authentifizierung.
+Die Architektur setzt auf ein Adapter-Pattern, bei dem jeder Service über einen spezifischen Adapter angebunden wird. Eine zentrale Service-Registry verwaltet, welcher Service welche Integrationsebene unterstützt. Bei Änderungen propagiert das System die neuen Daten je nach verfügbarem Kanal.
 
-Die Architektur nutzt ein Adapter Pattern, bei dem jeder Service über einen spezifischen Adapter angebunden wird. Eine zentrale Service-Registry verwaltet, welcher Service welches Integrationslevel unterstützt.
+Ein wesentlicher Aspekt des Architekturentwurfs ist die Datenhaltungsstrategie. Ich untersuche verschiedene Ansätze – zentrale Datenhaltung mit Verschlüsselung, Client-seitige Datenhaltung in der Browser-Extension, sowie Hybrid-Ansätze – und bewerte sie hinsichtlich Sicherheit, Benutzerfreundlichkeit und DSGVO-Compliance.
 
-### Phase 3: Sicherheitskonzept und Datenhaltungsstrategie
+### Phase 3: Implementierung
 
-In dieser Phase untersuche ich verschiedene Ansätze für sichere Datenhaltung: zentrale Datenbank mit Verschlüsselung, Client-Side Encryption (bei der der Server nur verschlüsselte Daten verarbeitet) sowie Hybrid-Ansätze. Für jeden Ansatz bewerte ich Sicherheitsrisiken, Implementierungskomplexität und DSGVO-Compliance.
+Ich implementiere einen funktionsfähigen Prototyp, der die Kernkonzepte der Architektur demonstriert. Der Prototyp umfasst:
 
-Besonderer Fokus liegt auf Zero-Knowledge-Ansätzen und der Frage, wie Browser-Extensions und Headless-Automations sicher mit dem Backend kommunizieren können. Dabei spielen Aspekte wie Content Security Policy und Cross-Origin Security eine zentrale Rolle.
+Eine Web-Anwendung als zentrale Oberfläche zur Adressverwaltung, mit Service-Verzeichnis und Status-Dashboard. Ein Backend mit Service-Registry, Adapter-Management und Unterstützung für E-Mail-basierte Benachrichtigungen. Eine Browser-Extension mit Formular-Erkennung und Auto-Fill-Funktionalität.
 
-### Phase 4: Implementierung eines funktionsfähigen Prototyps
+Als Proof-of-Concept implementiere ich Service-Integrationen auf allen drei Ebenen: rein manuelle Anleitungen für Services ohne digitale Schnittstellen, E-Mail-Automation für Services mit Kontaktformularen, Browser-Extension-basiertes Ausfüllen für gängige Online-Portale, sowie exemplarisch eine vollständige API-Integration.
 
-Ich implementiere ein MVP mit folgenden Komponenten:
+Der Umfang der Implementierung orientiert sich am Ziel, die Machbarkeit und das Zusammenspiel der verschiedenen Integrationsebenen zu demonstrieren – nicht daran, ein produktionsreifes System zu bauen.
 
-- **Web-Anwendung:** Zentrale Oberfläche zur Adressverwaltung mit Service-Verzeichnis und Status-Dashboard
-- **Backend-API:** Service-Registry, Adapter-Management, verschlüsselte Datenhaltung und E-Mail-Automation
-- **Browser-Extension:** Formular-Erkennung, Auto-Fill-Funktionalität und sichere Backend-Kommunikation
-- **Headless Browser-Automation:** Integration von Playwright oder Cypress mit Video-Recording und Error Handling
+### Phase 4: Evaluation
 
-Als Proof-of-Concept implementiere ich mindestens fünf Service-Integrationen auf verschiedenen Levels: manuelle Anleitung (beispielsweise für Behörden), E-Mail-Automation (für kleinere Versandhändler ohne Web-Portal), Browser-Extension (Amazon oder Zalando), Headless-Automation (Bank-Portal mit komplexem Login) sowie API-Integration mit einem Test-Service.
+Den Prototyp evaluiere ich anhand mehrerer Kriterien. Zunächst prüfe ich die funktionale Korrektheit: Funktionieren die verschiedenen Integrationsebenen wie konzipiert? Werden Adressänderungen zuverlässig über die jeweiligen Kanäle propagiert?
 
-### Phase 5: Evaluation und kritische Reflexion
+Dann betrachte ich die Architekturqualität: Wie gut lässt sich das System um neue Services erweitern? Wie verhält sich das Adapter-Pattern in der Praxis? Wo liegen die Grenzen des gewählten Ansatzes?
 
-Den fertigen Prototyp evaluiere ich hinsichtlich der Erfolgsquote verschiedener Integrationslevel, Performance, Skalierbarkeit und Security. Ein Threat-Modeling identifiziert potenzielle Angriffsvektoren. Zusätzlich bewerte ich die Usability des Systems.
+Ein Schwerpunkt liegt auf der Sicherheitsanalyse: Welche Angriffsvektoren existieren, insbesondere im Zusammenspiel zwischen Browser-Extension und Backend? Wie robust ist die gewählte Datenhaltungsstrategie?
 
-Die kritische Reflexion umfasst die Analyse, welche Aspekte gut funktioniert haben, welche Trade-offs eingegangen werden mussten, und wie sich der Ansatz im Vergleich zu Alternativen verhält.
+Schließlich reflektiere ich die Benutzbarkeit: Ist der Workflow für Nutzer nachvollziehbar? Wie wird der inkrementelle Mehrwert wahrgenommen, wenn anfangs nur wenige Services automatisiert sind?
 
-### Phase 6: Ausblick und Generalisierung
+### Phase 5: Diskussion und Ausblick
 
-Abschließend untersuche ich, wie sich das Konzept über Adressdaten hinaus erweitern ließe -- etwa auf Kontaktdaten, Präferenzen oder Zahlungsinformationen. Daraus entwickle ich eine Vision für eine umfassendere Self-Sovereign Personal Data Platform und diskutiere die damit verbundenen zusätzlichen Herausforderungen.
+Abschließend ordne ich die Ergebnisse ein: Was hat gut funktioniert, welche Trade-offs mussten eingegangen werden, und wo stößt der gewählte Ansatz an Grenzen?
+
+Im Ausblick skizziere ich, wie sich das Konzept über Adressdaten hinaus erweitern ließe – etwa auf Kontaktdaten, Zahlungsinformationen oder Präferenzen. Dabei diskutiere ich, welche zusätzlichen Herausforderungen bei einer Generalisierung zu einer umfassenderen Self-Sovereign Personal Data Platform entstehen würden.
+
+---
 
 ## Formales
 
