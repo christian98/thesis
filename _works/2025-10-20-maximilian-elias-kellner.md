@@ -12,7 +12,7 @@ slideshow: true
 final-presentation: 0fA9Z_2BrIw
 research-diary: false
 type: Praxisprojekt
-status: in-preparation
+status: finished
 visibility: published
 keywords: Web-Anwendung, 3D, ThreeJS
 main-examiner: true
