@@ -1,0 +1,262 @@
+[
+  {
+    "src": "output/images-small/photo-log-KELLNER-19-10-25-01-02-2-s.webp",
+    "metadata": {
+      "Title": "POC - Komplexe Exploded-View (PC-Komponenten)",
+      "Description": "Ein fortgeschrittener POC, der eine Exploded-View von PC-Hardware zeigt. Dieser Testfall diente zur Erprobung der Animation von komplexeren, verschachtelten 3D-Modellen mit der entworfenen Namenskonvention.",
+      "Rights": "Maximilian Elias Kellner",
+      "Caption": "",
+      "Headline": "POC - Komplexe Exploded-View (PC-Komponenten)",
+      "ImageWidth": 1600,
+      "ImageHeight": 1259,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/photo-log-KELLNER-19-10-25-01-02-s.webp",
+    "metadata": {
+      "Title": "POC - Szene mit einfacher Exploded View",
+      "Description": "Screenshot aus der Entwicklung, der das Animieren einer simplen Exploded View zeigt.",
+      "Rights": "Maximilian Elias Kellner",
+      "Caption": "",
+      "Headline": "POC - Szene mit einfacher Exploded View",
+      "ImageWidth": 1600,
+      "ImageHeight": 709,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/photo-log-KELLNER-19-10-25-01-03-s.webp",
+    "metadata": {
+      "Title": "POC - 2D-Beschriftungselemente",
+      "Description": "Demonstration der Implementierung von 2D-Beschriftungen als HTML-Overlay. Beim Klick auf ein 3D-Objekt wird ein kontextbezogenes Label mit Titel und Beschreibung angezeigt.",
+      "Rights": "Maximilian Elias Kellner",
+      "Caption": "",
+      "Headline": "POC - 2D-Beschriftungselemente",
+      "ImageWidth": 1600,
+      "ImageHeight": 1373,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/photo-log-KELLNER-19-10-25-01-04-2-s.webp",
+    "metadata": {
+      "Title": "UI - Einstellungen f++r Labelausrichtung",
+      "Description": "Screenshot des Einstellungsmen++s, das zur Konfiguration der 3D-Beschriftungselemente dient. Hier wird die Ausrichtung des Pointers (links/rechts, vorne, hinten, 45 Grad) gesteuert.",
+      "Rights": "Maximilian Elias Kellner",
+      "Caption": "",
+      "Headline": "UI - Einstellungen f++r Labelausrichtung",
+      "ImageWidth": 1600,
+      "ImageHeight": 1266,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/photo-log-KELLNER-19-10-25-01-04-3-s.webp",
+    "metadata": {
+      "Title": "Grafik - Aufbau des Pointer-Elements",
+      "Description": "Eine schematische Darstellung, die den Aufbau des 3D-Beschriftungselements 'Pointer' erkl+?rt. Es besteht aus zwei Canvas-Elementen: dem pointerCanvas und dem textBlockCanvas.",
+      "Rights": "Maximilian Elias Kellner",
+      "Caption": "",
+      "Headline": "Grafik - Aufbau des Pointer-Elements",
+      "ImageWidth": 1600,
+      "ImageHeight": 581,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/photo-log-KELLNER-19-10-25-01-04-s.webp",
+    "metadata": {
+      "Title": "POC - 3D-Beschriftungselement mit Pointer",
+      "Description": "Test eines 3D-Beschriftungselements. Ein 'Pointer', der direkt in der 3D-Szene gerendert wird, zeigt auf die ausgew+?hlte Komponente des Automodells und blendet die zugeh+?rige Information ein.",
+      "Rights": "Maximilian Elias Kellner",
+      "Caption": "",
+      "Headline": "POC - 3D-Beschriftungselement mit Pointer",
+      "ImageWidth": 1600,
+      "ImageHeight": 609,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/photo-log-KELLNER-19-10-25-01-05-2-s.webp",
+    "metadata": {
+      "Title": "UI-Design - Erste Varianten der Info-Cards",
+      "Description": "Eine +?bersicht ++ber verschiedene Design-Varianten der Info-Cards. Gezeigt werden unterschiedliche Layouts sowie ein Light- und Dark-Mode zur Anpassung an verschiedene Webseiten-Designs.",
+      "Rights": "Maximilian Elias Kellner",
+      "Caption": "",
+      "Headline": "UI-Design - Erste Varianten der Info-Cards",
+      "ImageWidth": 1600,
+      "ImageHeight": 835,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/photo-log-KELLNER-19-10-25-01-05-3-s.webp",
+    "metadata": {
+      "Title": "POC - Methoden zur Hervorhebung von 3D-Objekten",
+      "Description": "Test verschiedener visueller Methoden, um eine ausgew+?hlte Komponente im 3D-Raum hervorzuheben. Gezeigt werden u.a. Material+?nderung (Farbe), Wireframe-Darstellung und Glow-Effekte.",
+      "Rights": "Maximilian Elias Kellner",
+      "Caption": "",
+      "Headline": "POC - Methoden zur Hervorhebung von 3D-Objekten",
+      "ImageWidth": 1600,
+      "ImageHeight": 688,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/photo-log-KELLNER-19-10-25-01-05-s.webp",
+    "metadata": {
+      "Title": "POC - Exploded View mit 2D Info-Card und Hervorhebungen",
+      "Description": "Ansicht des POC, der das Automodell in einer Exploded-View mit Hervorhebung und Card zeigt. Die ausgew+?hlte Komponente wird hervorgehoben und die dazugeh+?rigen Informationen werden in einer 2D-Info-Card am unteren Bildschirmrand angezeigt.",
+      "Rights": "Maximilian Elias Kellner",
+      "Caption": "",
+      "Headline": "POC - Exploded View mit 2D Info-Card und Hervorhebungen",
+      "ImageWidth": 1600,
+      "ImageHeight": 766,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/photo-log-KELLNER-19-10-25-01-06-s.webp",
+    "metadata": {
+      "Title": "POC - Tweakpane Debug-UI",
+      "Description": "Screenshot der Tweakpane-Benutzeroberfl+?che, die w+?hrend der Entwicklung zur Echtzeit-Anpassung von Szenenparametern wie Hintergrundfarbe, Kameraposition und Lichtquellen verwendet wurde.",
+      "Rights": "Maximilian Elias Kellner",
+      "Caption": "",
+      "Headline": "POC - Tweakpane Debug-UI",
+      "ImageWidth": 1600,
+      "ImageHeight": 1350,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/photo-log-KELLNER-19-10-25-01-07-s.webp",
+    "metadata": {
+      "Title": "POC - Anime.js",
+      "Description": "Ein Proof of Concept f++r die Steuerung von Anime.js Animationen ++ber eine Benutzeroberfl+?che. Ein Slider und ein Button erm+?glichen die manuelle Steuerung des Animationsfortschritts.",
+      "Rights": "Maximilian Elias Kellner",
+      "Caption": "",
+      "Headline": "POC - Anime.js",
+      "ImageWidth": 1600,
+      "ImageHeight": 739,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/photo-log-KELLNER-19-10-25-02-00-s.webp",
+    "metadata": {
+      "Title": "Grafik - Animationslogik der Explosionsebenen",
+      "Description": "Schematische Darstellung der Logik f++r die Exploded-View-Animation. Objekte werden Ebenen (L1, L2, Ln) zugeordnet, die ihre Zieldistanz vom Zentrum nach Abschluss der Animation definieren.",
+      "Rights": "Maximilian Elias Kellner",
+      "Caption": "",
+      "Headline": "Grafik - Animationslogik der Explosionsebenen",
+      "ImageWidth": 1600,
+      "ImageHeight": 900,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/photo-log-KELLNER-19-10-25-02-01-s.webp",
+    "metadata": {
+      "Title": "3D-Szene - Finale Komposition (Texturiert)",
+      "Description": "Die finale Testumgebung mit dem vollst+?ndig texturierten und platzierten Automodell.",
+      "Rights": "Maximilian Elias Kellner",
+      "Caption": "",
+      "Headline": "3D-Szene - Finale Komposition (Texturiert)",
+      "ImageWidth": 1600,
+      "ImageHeight": 1340,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/photo-log-KELLNER-19-10-25-02-02-s.webp",
+    "metadata": {
+      "Title": "3D-Szene - Beispiel mit Ghost-Highlight",
+      "Description": "Die Testumgebung mit Ghost-Highlight.",
+      "Rights": "Maximilian Elias Kellner",
+      "Caption": "",
+      "Headline": "3D-Szene - Beispiel mit Ghost-Highlight",
+      "ImageWidth": 1600,
+      "ImageHeight": 1435,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/photo-log-KELLNER-19-10-25-02-03-s.webp",
+    "metadata": {
+      "Title": "3D-Szene - Beispiel mit Wireframe-Highlight",
+      "Description": "Die Testumgebung mit Wireframe-Highlight.",
+      "Rights": "Maximilian Elias Kellner",
+      "Caption": "",
+      "Headline": "3D-Szene - Beispiel mit Wireframe-Highlight",
+      "ImageWidth": 1600,
+      "ImageHeight": 1304,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/photo-log-KELLNER-19-10-25-02-04-s.webp",
+    "metadata": {
+      "Title": "Prototyp - Attached Card",
+      "Description": "Finale Version der 'Attached Card'.",
+      "Rights": "Maximilian Elias Kellner",
+      "Caption": "",
+      "Headline": "Prototyp - Attached Card",
+      "ImageWidth": 1600,
+      "ImageHeight": 834,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/photo-log-KELLNER-19-10-25-02-05-s.webp",
+    "metadata": {
+      "Title": "Prototyp - Bottom Card",
+      "Description": "Finale Version der 'Bottom Card'.",
+      "Rights": "Maximilian Elias Kellner",
+      "Caption": "",
+      "Headline": "Prototyp - Bottom Card",
+      "ImageWidth": 1600,
+      "ImageHeight": 1251,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/photo-log-KELLNER-19-10-25-02-06-s.webp",
+    "metadata": {
+      "Title": "Prototyp - Pointer",
+      "Description": "Finale Version vom 'Pointer'.",
+      "Rights": "Maximilian Elias Kellner",
+      "Caption": "",
+      "Headline": "Prototyp - Pointer",
+      "ImageWidth": 1600,
+      "ImageHeight": 715,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/photo-log-KELLNER-19-10-25-02-07-s.webp",
+    "metadata": {
+      "Title": "Prototyp - Finale Bottom Card (Dark- und Lightmode)",
+      "Description": "Finale Version der 'Bottom Card', welche die Informationen am unteren Bildschirmrand anzeigt. Der Screenshot zeigt die finale Gestaltung im Dark- und Lightmode des Prototypen.",
+      "Rights": "Maximilian Elias Kellner",
+      "Caption": "",
+      "Headline": "Prototyp - Finale Bottom Card (Dark- und Lightmode)",
+      "ImageWidth": 1600,
+      "ImageHeight": 1161,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/photo-log-KELLNER-19-10-25-02-09-s.webp",
+    "metadata": {
+      "Title": "Animation - Exploded View Endzustand Heck",
+      "Description": "Statisches Bild, das den Endzustand der Exploded-View-Animation des Automodells aus der Seitenansicht zeigt. Alle Komponenten haben ihre finale Position erreicht.",
+      "Rights": "Maximilian Elias Kellner",
+      "Caption": "",
+      "Headline": "Animation - Exploded View Endzustand Heck",
+      "ImageWidth": 1600,
+      "ImageHeight": 1036,
+      "Orientation": "landscape"
+    }
+  }
+]

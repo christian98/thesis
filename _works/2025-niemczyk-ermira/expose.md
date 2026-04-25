@@ -4,7 +4,7 @@ Von Ermira Niemczyk
 Matrikelnummer 11117335
 Studiengang Medieninformatik
 
-Künstliche Intelligenz als visueller Wegweiser. Prototying eines Webtools zur interaktiven Studienorientierung in der Medieninformatik mit Hilfe von Text-to-Image Technologien.
+Konzeption und Entwicklung einer interaktiven WebApp zur Erstellung von KI generierten Bildwelten für den Studiengang Medieninformatik 
 
 Geplanter Zeitraum: Sommersemester 2025
                     21.05.2025 - 23.07.2025
@@ -19,7 +19,7 @@ Dank generativer Künstlicher Intelligenz, insbesondere Text-to-Image-Verfahren,
 
 Bisher fehlt es an einem interaktiven System, das es ermöglicht, KI-generierte, ortsspezifische und fotorealistische Bilder gezielt anhand von Suchbegriffen (Prompts) aufzurufen, etwa um typische Räume, Situationen oder Lehrinhalte der TH Köln visuell darzustellen. Dozierende, Studieninteressierte oder die Hochschulkommunikation haben dadurch keine einfache Möglichkeit, passende Bildmaterialien dynamisch zu generieren oder gezielt abzurufen, z. B. um Vorträge, Infoseiten oder Präsentationen visuell zu unterstützen.
 
-Ein besonderes Problem liegt in der Zugänglichkeit: Es fehlt ein intuitives Webtool, mit dem relevante Begriffe wie "Greenscreen", "Labor" oder "Projektraum" in einer benutzerfreundlichen Oberfläche gesucht und durch KI in ein passendes, realitätsnahes Bild der TH Köln überführt werden können. Genau hier setzt der entwickelte Prototyp an.
+Ein besonderes Problem liegt in der Zugänglichkeit: Es fehlt ein intuitives Webtool, mit dem relevante Begriffe wie "Greenscreen", "Labor" oder "Projektraum" in einer benutzerfreundlichen Oberfläche gesucht und durch KI in ein passendes, realitätsnahes Bild der TH Köln überführt werden können. Genau hier setzt der zu entwickelte Prototyp an.
 
 ## Zielsetzung / Fragestellung des Projektes
 

@@ -1,0 +1,132 @@
+[
+  {
+    "src": "output/images-small/bilddoku-00-meike-jungilligens-s.webp",
+    "metadata": {
+      "Title": "Recherche: Informationssammlung und -ordnung",
+      "Description": "Recherche: Informationssammlung und -ordnung",
+      "Rights": "Meike Jungilligens",
+      "Caption": "",
+      "Headline": "Recherche: Informationssammlung und -ordnung",
+      "ImageWidth": 1600,
+      "ImageHeight": 1201,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/bilddoku-01-meike-jungilligens-s.webp",
+    "metadata": {
+      "Title": "Dokumentation: Gesamteindruck des projektspezifischen MIRO-Boards",
+      "Description": "Dokumentation: Gesamteindruck des projektspezifischen MIRO-Boards",
+      "Rights": "Meike Jungilligens",
+      "Caption": "",
+      "Headline": "Dokumentation: Gesamteindruck des projektspezifischen MIRO-Boards",
+      "ImageWidth": 1600,
+      "ImageHeight": 860,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/bilddoku-02-meike-jungilligens-s.webp",
+    "metadata": {
+      "Title": "Dokumentation: Bewertungstabelle für die Barrierefreiheit einer Komponente",
+      "Description": "Dokumentation: Bewertungstabelle für die Barrierefreiheit einer Komponente",
+      "Rights": "Meike Jungilligens",
+      "Caption": "",
+      "Headline": "Dokumentation: Bewertungstabelle für die Barrierefreiheit einer Komponente",
+      "ImageWidth": 1600,
+      "ImageHeight": 1101,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/bilddoku-03-meike-jungilligens-s.webp",
+    "metadata": {
+      "Title": "Testing: Vuetify-Repository mit Komponenten zum Testen",
+      "Description": "Testing: Vuetify-Repository mit Komponenten zum Testen",
+      "Rights": "Meike Jungilligens",
+      "Caption": "",
+      "Headline": "Testing: Vuetify-Repository mit Komponenten zum Testen",
+      "ImageWidth": 1600,
+      "ImageHeight": 875,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/bilddoku-04-meike-jungilligens-s.webp",
+    "metadata": {
+      "Title": "Testing:Spetifisches Vuetify-Repository-File einer getesteten Komponente",
+      "Description": "Testing:Spetifisches Vuetify-Repository-File einer getesteten Komponente",
+      "Rights": "Meike Jungilligens",
+      "Caption": "",
+      "Headline": "Testing:Spetifisches Vuetify-Repository-File einer getesteten Komponente",
+      "ImageWidth": 1600,
+      "ImageHeight": 1257,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/bilddoku-05-meike-jungilligens-s.webp",
+    "metadata": {
+      "Title": "Testing: Automatisches Testen im Browser mit Chrome Lighthouse",
+      "Description": "Testing: Automatisches Testen im Browser mit Chrome Lighthouse",
+      "Rights": "Meike Jungilligens",
+      "Caption": "",
+      "Headline": "Testing: Automatisches Testen im Browser mit Chrome Lighthouse",
+      "ImageWidth": 1600,
+      "ImageHeight": 831,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/bilddoku-06-meike-jungilligens-s.webp",
+    "metadata": {
+      "Title": "Testing: Manuelle Überprüfung der Kontrastwerte",
+      "Description": "Testing: Manuelle Überprüfung der Kontrastwerte",
+      "Rights": "Meike Jungilligens",
+      "Caption": "",
+      "Headline": "Testing: Manuelle Überprüfung der Kontrastwerte",
+      "ImageWidth": 1600,
+      "ImageHeight": 1574,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/bilddoku-07-meike-jungilligens-s.webp",
+    "metadata": {
+      "Title": "Analysen zur Vorbereitung der Postergestaltung",
+      "Description": "Analysen zur Vorbereitung der Postergestaltung",
+      "Rights": "Meike Jungilligens",
+      "Caption": "",
+      "Headline": "Analysen zur Vorbereitung der Postergestaltung",
+      "ImageWidth": 1600,
+      "ImageHeight": 987,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/bilddoku-08-meike-jungilligens-s.webp",
+    "metadata": {
+      "Title": "Design: Erste Wireframes für Postergestaltung",
+      "Description": "Design: Erste Wireframes für Postergestaltung",
+      "Rights": "Meike Jungilligens",
+      "Caption": "",
+      "Headline": "Design: Erste Wireframes für Postergestaltung",
+      "ImageWidth": 1600,
+      "ImageHeight": 1201,
+      "Orientation": "landscape"
+    }
+  },
+  {
+    "src": "output/images-small/bilddoku-09-meike-jungilligens-s.webp",
+    "metadata": {
+      "Title": "Design: Übersicht des Figma-Files der Designphase",
+      "Description": "Design: Übersicht des Figma-Files der Designphase",
+      "Rights": "Meike Jungilligens",
+      "Caption": "",
+      "Headline": "Design: Übersicht des Figma-Files der Designphase",
+      "ImageWidth": 1600,
+      "ImageHeight": 1473,
+      "Orientation": "landscape"
+    }
+  }
+]
