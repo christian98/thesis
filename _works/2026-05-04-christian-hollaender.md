@@ -3,8 +3,10 @@ layout: work-result
 author: Christian Holländer
 related-folder: 2025-hollaender-christian
 title: "Multi-Channel Web-Integration für föderiertes Adressmanagement: Design und Implementierung einer Self-Sovereign Address Lösung"
-date: 2026-04-04
+date: 2026-05-04
 result-pdf: 2025-hollaender-christian/04-results/Masterarbeit-Hollaender-Christian.pdf
+result-website: https://smove.pyramine.de
+result-repo: https://gitlab.com/christian98-uni/masterarbeit
 slideshow: false
 research-diary: true
 type: Masterarbeit
